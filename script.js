@@ -36,3 +36,15 @@ function speakResponse(text) {
     window.speechSynthesis.speak(utterance);
   }
 }
+setTimeout(() => {
+  const replyText = `I've noted that for "${message}". You can also use the sidebar tools above to generate full drafts!`;
+  
+  const aiMsg = document.createElement('div');
+  aiMsg.className = 'chat-bubble ai';
+  aiMsg.innerText = `🌸 Amanda: ${replyText}`;
+  feed.appendChild(aiMsg);
+  feed.scrollTop = feed.scrollHeight;
+
+  // Amanda speaks the response out loud
+  speakResponse(replyText);
+}, 350);
