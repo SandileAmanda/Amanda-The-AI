@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amanda The AI — Workplace Productivity Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-badge">🌸</div>
+        <div>
+          <h2>Amanda The AI</h2>
+          <span>Workplace Assistant 💕</span>
+        </div>
+      </div>
+
+      <div class="nav-section-title">WORKSPACE</div>
+      <nav class="nav-list">
+        <button class="nav-btn active" onclick="navigate('dashboard')">
+          <span class="icon">✨</span> Dashboard
+        </button>
+        <button class="nav-btn" onclick="navigate('email')">
+          <span class="icon">💌</span> Smart Email Generator
+        </button>
+        <button class="nav-btn" onclick="navigate('notes')">
+          <span class="icon">📝</span> Notes Summarizer
+        </button>
+        <button class="nav-btn" onclick="navigate('tasks')">
+          <span class="icon">📅</span> AI Task Planner
+        </button>
+        <button class="nav-btn" onclick="navigate('research')">
+          <span class="icon">🔍</span> AI Research Assistant
+        </button>
+        <button class="nav-btn" onclick="navigate('chat')">
+          <span class="icon">💬</span> AI Chatbot
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="profile-chip">
+          <span class="avatar">👩‍💼</span>
+          <div>
+            <strong>Amanda AI</strong>
+            <small>Active & Ready</small>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-body">
+      <!-- Responsible AI Disclaimer Banner -->
+      <div class="disclaimer-banner">
+        <span class="info-icon">⚠️</span>
+        <span><strong>Responsible AI Notice:</strong> AI-generated content may require human review and fact-checking before final use.</span>
+      </div>
+
+      <!-- VIEW: DASHBOARD -->
+      <section id="view-dashboard" class="tool-view active">
+        <div class="hero-banner">
+          <div class="hero-tag">✨ Powered by Amanda The AI</div>
+          <h1>Your AI Workplace Assistant 💖</h1>
+          <p>Automate emails, summarize meetings, plan your week, and research smarter — all from one beautifully simple workspace.</p>
+          <div class="hero-cta-group">
+            <button class="btn btn-primary" onclick="navigate('email')">Start with Email 💌</button>
+            <button class="btn btn-secondary" onclick="navigate('chat')">Open AI Chat 💬</button>
+          </div>
+        </div>
+
+        <!-- Metric Stat Cards -->
+        <div class="metrics-row">
+          <div class="metric-card">
+            <div class="metric-icon pink">⏰</div>
+            <div class="metric-info">
+              <h3>8.5h</h3>
+              <p>Hours saved per week</p>
+            </div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-icon purple">⚡</div>
+            <div class="metric-info">
+              <h3>12×</h3>
+              <p>Faster turnaround</p>
+            </div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-icon rose">🛡️</div>
+            <div class="metric-info">
+              <h3>100%</h3>
+              <p>Editable & private</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Productivity Tools Grid -->
+        <div class="productivity-section">
+          <h2>Productivity Tools</h2>
+          <p class="subtitle">Pick a tool to automate your tasks.</p>
+
+          <div class="card-grid">
+            <div class="app-card" onclick="navigate('email')">
+              <div class="card-badge pink">💌</div>
+              <h3>Smart Email Generator</h3>
+              <p>Draft polished, tailored emails in seconds with dynamic tone and audience controls.</p>
+              <span class="card-action">Open tool →</span>
+            </div>
+
+            <div class="app-card" onclick="navigate('notes')">
+              <div class="card-badge purple">📝</div>
+              <h3>Meeting Notes Summarizer</h3>
+              <p>Turn raw meeting transcripts and notes into key takeaways and action items.</p>
+              <span class="card-action">Open tool →</span>
+            </div>
+
+            <div class="app-card" onclick="navigate('tasks')">
+              <div class="card-badge rose">📅</div>
+              <h3>AI Task Planner</h3>
+              <p>Prioritize your workflow using urgency, importance, and structured milestones.</p>
+              <span class="card-action">Open tool →</span>
+            </div>
+
+            <div class="app-card" onclick="navigate('research')">
+              <div class="card-badge yellow">🔍</div>
+              <h3>AI Research Assistant</h3>
+              <p>Analyze complex queries and generate structured executive overviews rapidly.</p>
+              <span class="card-action">Open tool →</span>
+            </div>
+
+            <div class="app-card" onclick="navigate('chat')">
+              <div class="card-badge blue">💬</div>
+              <h3>AI Chatbot Interface</h3>
+              <p>Converse with Amanda for ad-hoc brainstorming, editing, and workflow guidance.</p>
+              <span class="card-action">Open tool →</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW: SMART EMAIL GENERATOR -->
+      <section id="view-email" class="tool-view">
+        <div class="form-container">
+          <h2>💌 Smart Email Generator</h2>
+          <p class="tool-desc">Provide structured details to generate a complete email draft.</p>
+          
+          <div class="input-group">
+            <label>Recipient Name or Title</label>
+            <input type="text" id="emailRecipient" placeholder="e.g., Mr. Sithole, Hiring Team, Project Lead" />
+          </div>
+
+          <div class="input-group">
+            <label>Main Subject / Topic</label>
+            <input type="text" id="emailTopic" placeholder="e.g., Request for Site Inspection Extension" />
+          </div>
+
+          <div class="input-group-row">
+            <div class="input-group">
+              <label>Select Tone</label>
+              <select id="emailTone">
+                <option value="Professional & Courteous">Professional & Courteous 🌸</option>
+                <option value="Direct & Formal">Direct & Formal 💼</option>
+                <option value="Warm & Friendly">Warm & Friendly ✨</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label>Key Action Required</label>
+              <input type="text" id="emailAction" placeholder="e.g., Approval needed by Thursday" />
+            </div>
+          </div>
+
+          <button class="btn btn-primary" onclick="generateSmartEmail()">Generate Email Draft ✨</button>
+        </div>
+      </section>
+
+      <!-- VIEW: NOTES SUMMARIZER -->
+      <section id="view-notes" class="tool-view">
+        <div class="form-container">
+          <h2>📝 Meeting Notes Summarizer</h2>
+          <p class="tool-desc">Paste transcripts, bullet points, or raw notes to create structured summaries.</p>
+
+          <div class="input-group">
+            <label>Meeting Title / Context</label>
+            <input type="text" id="meetingTitle" placeholder="e.g., Weekly Civil Engineering Standup" />
+          </div>
+
+          <div class="input-group">
+            <label>Raw Notes & Discussion Points</label>
+            <textarea id="notesContent" rows="6" placeholder="Paste notes, transcripts, or speaker updates here..."></textarea>
+          </div>
+
+          <button class="btn btn-primary" onclick="generateNotesSummary()">Summarize Meeting ✨</button>
+        </div>
+      </section>
+
+      <!-- VIEW: TASK PLANNER -->
+      <section id="view-tasks" class="tool-view">
+        <div class="form-container">
+          <h2>📅 AI Task Planner</h2>
+          <p class="tool-desc">Break down projects into prioritized, actionable schedules.</p>
+
+          <div class="input-group">
+            <label>Goal or Project Title</label>
+            <input type="text" id="taskGoal" placeholder="e.g., Finalize Site Compliance Checklist" />
+          </div>
+
+          <div class="input-group-row">
+            <div class="input-group">
+              <label>Urgency Level</label>
+              <select id="taskUrgency">
+                <option value="High (Immediate Priority)">High (Immediate Priority) 🔥</option>
+                <option value="Medium (This Week)">Medium (This Week) ⏳</option>
+                <option value="Low (Backlog)">Low (Backlog) 📋</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label>Estimated Deadline</label>
+              <input type="text" id="taskDeadline" placeholder="e.g., End of Day Friday" />
+            </div>
+          </div>
+
+          <button class="btn btn-primary" onclick="generateTaskPlan()">Generate Task Breakdown ✨</button>
+        </div>
+      </section>
+
+      <!-- VIEW: RESEARCH ASSISTANT -->
+      <section id="view-research" class="tool-view">
+        <div class="form-container">
+          <h2>🔍 AI Research Assistant</h2>
+          <p class="tool-desc">Generate structured overviews, key concepts, and best practices on any subject.</p>
+
+          <div class="input-group">
+            <label>Research Topic</label>
+            <input type="text" id="researchTopic" placeholder="e.g., Health, Safety and Environmental (HSE) Compliance Standards" />
+          </div>
+
+          <div class="input-group">
+            <label>Focus Area</label>
+            <select id="researchFocus">
+              <option value="Executive Summary & Best Practices">Executive Summary & Best Practices 📊</option>
+              <option value="Regulatory & Legal Framework">Regulatory & Legal Framework ⚖️</option>
+              <option value="Step-by-Step Implementation Guide">Step-by-Step Implementation Guide 🛠️</option>
+            </select>
+          </div>
+
+          <button class="btn btn-primary" onclick="generateResearchInsight()">Run Research Analysis ✨</button>
+        </div>
+      </section>
+
+      <!-- VIEW: CHATBOT INTERFACE -->
+      <section id="view-chat" class="tool-view">
+        <div class="form-container">
+          <h2>💬 Amanda AI Chatbot</h2>
+          <p class="tool-desc">Direct AI conversation for quick questions, rephrasing, and brainstorming.</p>
+
+          <div id="chatFeed" class="chat-viewport"></div>
+          
+          <div class="chat-bar">
+            <input type="text" id="chatInput" placeholder="Message Amanda..." onkeydown="checkChatEnter(event)" />
+            <button class="btn btn-primary" onclick="handleChatSubmit()">Send 💖</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- REUSABLE EDITABLE OUTPUT SECTION -->
+      <div id="outputWrapper" class="output-box" style="display: none;">
+        <div class="output-topbar">
+          <span class="output-title">✨ Amanda's Output (Editable)</span>
+          <div class="output-btns">
+            <button class="btn-sm" onclick="copyOutputText()">📋 Copy</button>
+            <button class="btn-sm close" onclick="closeOutput()">✕</button>
+          </div>
+        </div>
+        <textarea id="editableOutput" class="editable-area" rows="10"></textarea>
+        <div class="output-footer-note">
+          💡 Click directly inside the box above to edit, modify, or format the draft.
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
