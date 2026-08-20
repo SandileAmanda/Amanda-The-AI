@@ -281,6 +281,11 @@
       </div>
     </main>
   </div>
+<div class="chat-bar">
+  <input type="text" id="chatInput" placeholder="Message or talk to Amanda..." onkeydown="checkChatEnter(event)" />
+  <button class="btn btn-secondary" onclick="startVoiceInput()" title="Speak">🎤</button>
+  <button class="btn btn-primary" onclick="handleChatSubmit()">Send 💖</button>
+</div>
 
   <script src="script.js"></script>
 </body>
